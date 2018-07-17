@@ -1,0 +1,111 @@
+@charset "utf-8";
+$font-size:37.5px;
+$index_color01: #010921;
+$index_color02: #17083d;
+$small_color: #9d92a6;
+$item_title_color: #f2d4fa;
+$footer_color: #f4e2fa;
+$team_color01: #00ffff;
+$team_color02: #ff00ff;
+$team_text01: #00b7ee;
+$team_text02:#e500e5;
+$bgColorHeader:#1c1b20;
+$dot01:#00ffff;
+$dot02:#00a1e9;
+$dot03:#009d97;
+$dot04:#f9bf00;
+$dot05:#e50010;
+
+$class_color01: #00ffff;
+$class_color02: #8f7ea1;
+$class_color03: #f4e2fa;
+$class_color04: #ff00ff;
+
+// $img_base_url: "/static/img"; // 本地开发
+// $img_base_url: "/report/dist/static/img"; // 手机测试
+$img_base_url: "/webapp/report/dist/static/img"; // 本地模拟服务测试
+@function r($px){
+    @return $px/$font-size/2*1rem
+};
+@mixin web_reset{
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    background-color: $index_color01;
+    overflow: hidden;
+    overflow-y: scroll;
+};
+@mixin web_next{
+    // margin-top: r(90px);
+    // margin-top: r(50px);
+    padding-top: r(70px);
+};
+@mixin get_more{
+    .load_more{
+        width: 100%;
+        padding: r(28px) 0;
+        font-size: r(26px);
+        color: #9d92a6;
+        text-align: center;
+        span,i{
+            vertical-align: middle;
+        }
+        i{
+            display: inline-block;
+            transform: rotate(45deg);
+        }
+        .rotate{
+            animation: rotation 1s infinite;
+        }
+    }
+};
+@keyframes rotation{
+    from{
+        transform: rotate(45deg);
+    }
+    to{
+        transform: rotate(405deg);
+    }
+}
+@keyframes dot01{
+    from{
+        box-shadow: 0 0 0 0 $dot01;
+    }
+    to{
+        box-shadow: 0 0 r(3px) r(3px) $dot01;
+    }
+}
+@keyframes dot02{
+    from{
+        box-shadow: 0 0 0 0 $dot02;
+    }
+    to{
+        box-shadow: 0 0 r(3px) r(3px) $dot02;
+    }
+}
+@keyframes dot03{
+    from{
+        box-shadow: 0 0 0 0 $dot03;
+    }
+    to{
+        box-shadow: 0 0 r(3px) r(3px) $dot03;
+    }
+}
+@keyframes dot04{
+    from{
+        box-shadow: 0 0 0 0 $dot04;
+    }
+    to{
+        box-shadow: 0 0 r(3px) r(3px) $dot04;
+    }
+}
+@keyframes dot05{
+    from{
+        box-shadow: 0 0 0 0 $dot05;
+    }
+    to{
+        box-shadow: 0 0 r(3px) r(3px) $dot05;
+    }
+}
